@@ -42,6 +42,12 @@ Baseline reference for the `apify` CLI and the JS/Python SDKs. Command surface i
 
 Template selection rationale (cost/anti-bot trade-offs) is owned by a scraper-building workflow.
 
+> **AI-assisted development.** Every `apify create` template ships an `AGENTS.md` at the project
+> root that Claude Code / Cursor / Codex / Gemini CLI auto-read for context. For the full
+> AI-build workflow (Apify's canned assistant prompt, the official `apify/agent-skills` via
+> `npx skills add apify/agent-skills`, the docs-grounding MCP `mcp.apify.com/?tools=docs`, and
+> the `llms.txt` / `.md` doc-feeding tricks), see `build-with-ai.md`.
+
 ## JavaScript SDK (`apify` + `crawlee`)
 
 - **Lifecycle:** `Actor.init()` … `Actor.exit()`, or wrap logic in `Actor.main(async () => { … })`.

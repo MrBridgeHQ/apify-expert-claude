@@ -20,6 +20,7 @@ Platform facts drift. A document that hard-codes "Standby idle timeout default i
 | Apify Proxy: datacenter / residential / SERP, sessions, geo | `references/platform-overview.md` |
 | Schedules, webhooks, native integrations, monitoring | `references/platform-overview.md` |
 | `apify` CLI commands, JS/Python SDK, `apify create` templates | `references/cli-and-sdk.md` |
+| **Building Actors with AI**: assistant prompt, `apify create` templates ship `AGENTS.md`, official `apify/agent-skills`, docs MCP (`?tools=docs`), `llms.txt` | `references/build-with-ai.md` |
 | REST API, tokens, scheduling via API, Apify MCP access pattern | `references/api-and-integrations.md` |
 | Standby mode platform behavior, Store mechanics, account/limits | `references/platform-features.md` |
 | **Recent platform changes** | `references/changelog-digest.md` |
