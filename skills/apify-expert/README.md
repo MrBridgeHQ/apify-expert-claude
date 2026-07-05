@@ -1,8 +1,8 @@
-# Apify Expert — a Claude skill
+# Apify Expert - a Claude skill
 
 A Claude Code skill that serves as a **platform-knowledge hub** for the [Apify](https://apify.com) platform: a curated, deduplicated baseline of platform mechanics (Actors, runs, builds, storage, Apify Proxy, schedules, webhooks, integrations, the REST API, the `apify` CLI, the JS/Python SDK, Standby mode, Store mechanics) plus a newest-first digest of recent platform changes.
 
-It exists so that any Claude Code session — whether you're building a scraper, an MCP server, pricing an Actor, or writing Store content — has one authoritative place to check **current** Apify platform facts instead of relying on stale memory.
+It exists so that any Claude Code session - whether you're building a scraper, an MCP server, pricing an Actor, or writing Store content - has one authoritative place to check **current** Apify platform facts instead of relying on stale memory.
 
 ## Why this skill exists
 
@@ -37,13 +37,13 @@ apify-expert/
 
 This skill owns *platform mechanics*. Deep domain work belongs to dedicated workflows:
 
-- **Scraper Actor code & architecture** (Crawlee, templates, no-code config) — a scraper-building workflow.
-- **MCP server Actor code & architecture** (proxy template, Standby wiring) — an MCP-server-building workflow.
-- **Pricing / PPE / `Actor.charge` / revenue** — a monetization workflow.
-- **README / input-output schemas / Store description** — a Store-content authoring workflow.
-- **Anti-bot doctrine, tool ladder, hidden APIs** — a scraping-doctrine workflow.
+- **Scraper Actor code & architecture** (Crawlee, templates, no-code config) - a scraper-building workflow.
+- **MCP server Actor code & architecture** (proxy template, Standby wiring) - an MCP-server-building workflow.
+- **Pricing / PPE / `Actor.charge` / revenue** - a monetization workflow.
+- **README / input-output schemas / Store description** - a Store-content authoring workflow.
+- **Anti-bot doctrine, tool ladder, hidden APIs** - a scraping-doctrine workflow.
 
-This skill gives those workflows their *platform substrate* (e.g. "how Standby billing works", "current storage limits") — it does not do their job.
+This skill gives those workflows their *platform substrate* (e.g. "how Standby billing works", "current storage limits") - it does not do their job.
 
 ## Installation
 
@@ -54,7 +54,7 @@ mkdir -p ~/.claude/skills
 unzip apify-expert.zip -d ~/.claude/skills/
 ```
 
-This skill has no runtime dependencies — it is pure reference content (Markdown).
+This skill has no runtime dependencies - it is pure reference content (Markdown).
 
 ## How to invoke
 
@@ -63,7 +63,7 @@ Once installed, the skill auto-activates on Apify platform questions. Example pr
 - "What's the memory↔CPU coupling on Apify? How many vCPUs does 4096 MB give me?"
 - "What's new on Apify? Did the changelog change anything about Standby?"
 - "Is the `ts-mcp-server` template still current?"
-- "How does Standby billing work — do I pay for idle time?"
+- "How does Standby billing work - do I pay for idle time?"
 - "What are the current `apify create` templates?"
 
 If auto-activation misses, force it: "Use the `apify-expert` skill to..."
@@ -76,14 +76,14 @@ If auto-activation misses, force it: "Use the `apify-expert` skill to..."
 
 This skill is part of the [mr-bridge.com](https://mr-bridge.com) toolkit for scraping, data, and content automation. Related resources:
 
-- [mr-bridge.com](https://mr-bridge.com) — home
-- [Scrapers](https://mr-bridge.com/scrapers) — the Apify Actor portfolio
-- [MCP servers](https://mr-bridge.com/mcp-servers) — Model Context Protocol servers
-- [AI workflows](https://mr-bridge.com/ai-workflows) — agents and automation
-- [Studies](https://mr-bridge.com/studies) — data studies and one-pagers
-- [Articles](https://mr-bridge.com/articles) — write-ups and guides
-- [Solutions](https://mr-bridge.com/solutions) — end-to-end solutions
+- [mr-bridge.com](https://mr-bridge.com) - home
+- [Scrapers](https://mr-bridge.com/scrapers) - the Apify Actor portfolio
+- [MCP servers](https://mr-bridge.com/mcp-servers) - Model Context Protocol servers
+- [AI workflows](https://mr-bridge.com/ai-workflows) - agents and automation
+- [Studies](https://mr-bridge.com/studies) - data studies and one-pagers
+- [Articles](https://mr-bridge.com/articles) - write-ups and guides
+- [Solutions](https://mr-bridge.com/solutions) - end-to-end solutions
 
 ## License
 
-Personal use. Customize freely. No warranty. Platform figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits — they drift.
+Personal use. Customize freely. No warranty. Platform figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits - they drift.

@@ -1,6 +1,6 @@
 # Apify platform overview
 
-Curated baseline of platform mechanics. Updated by hand when a `changelog-digest.md` entry warrants it. Figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits — they drift.
+Curated baseline of platform mechanics. Updated by hand when a `changelog-digest.md` entry warrants it. Figures flagged *(verify)* should be confirmed against <https://docs.apify.com> before being quoted as hard limits - they drift.
 
 ## Actors
 
@@ -14,7 +14,7 @@ Curated baseline of platform mechanics. Updated by hand when a `changelog-digest
 - **Memory ↔ CPU coupling (key fact):** CPU is allocated proportionally to memory. **4096 MB = 1 full vCPU core.** So 1024 MB ≈ 0.25 core, 8192 MB ≈ 2 cores. Memory must be a power of two (128, 256, 512, 1024, 2048, 4096, 8192 MB…), capped by your account's max-memory limit.
 - **Timeout:** configurable per run (set `0` for unlimited). Default *(verify)* ~3600 s on many Actors but it is Actor-defined.
 - **Resurrection:** a finished/aborted/timed-out run can be *resurrected* to continue from its persisted state (same run ID, same storages). Crawlee state + `Actor.reboot()` support this.
-- **Billing unit:** compute = memory-GB × runtime-hours (plus proxy, storage operations, data transfer). PPE Actors add `Actor.charge()` events on top — see a monetization workflow.
+- **Billing unit:** compute = memory-GB × runtime-hours (plus proxy, storage operations, data transfer). PPE Actors add `Actor.charge()` events on top - see a monetization workflow.
 
 ## Builds & versioning
 
@@ -29,7 +29,7 @@ All three are accessible via Console, REST API, CLI, and SDK. Each run gets a **
 - **Append-only, tabular** storage for results (rows of JSON). Ideal for scraped items.
 - Per-item size limit **~9 MB** *(verify)*.
 - Export: JSON, JSONL, CSV, Excel, XML, RSS, HTML.
-- **Multiple datasets per Actor** are now supported, each with its own schema + validation (changelog 2026-04-23) — previously one default dataset per run.
+- **Multiple datasets per Actor** are now supported, each with its own schema + validation (changelog 2026-04-23) - previously one default dataset per run.
 
 ### Key-value store (KVS)
 - Stores **records by key**, any content type (JSON, HTML, images, binaries, text).
@@ -46,12 +46,12 @@ All three are accessible via Console, REST API, CLI, and SDK. Each run gets a **
 
 ## Apify Proxy
 
-- **Datacenter** — fastest, cheapest; higher block risk. Billed per IP/usage.
-- **Residential** — home/office IPs, lowest block rate; **billed per GB** (verified). Use sparingly for hard targets.
-- **Google SERP** — for Google SERP extraction, with country/language targeting.
+- **Datacenter** - fastest, cheapest; higher block risk. Billed per IP/usage.
+- **Residential** - home/office IPs, lowest block rate; **billed per GB** (verified). Use sparingly for hard targets.
+- **Google SERP** - for Google SERP extraction, with country/language targeting.
 - **Sessions:** a `session` id pins a sticky IP across requests; rotate by changing the session id. Country targeting via `country` param / proxy group config.
 - Connect via the proxy URL (`http://<groups>,session-<id>,country-<CC>:<password>@proxy.apify.com:8000`) or `Actor.createProxyConfiguration()` in the SDK.
-- Anti-bot strategy (when/which proxy, fingerprinting) is owned by a scraping-doctrine workflow — this is just the platform mechanism.
+- Anti-bot strategy (when/which proxy, fingerprinting) is owned by a scraping-doctrine workflow - this is just the platform mechanism.
 
 ## Schedules
 

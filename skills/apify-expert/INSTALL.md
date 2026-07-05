@@ -1,8 +1,8 @@
-# Installation — Apify Expert skill
+# Installation - Apify Expert skill
 
 This skill is designed to be installed at the **user level** in Claude Code, so it's available across all your projects without copying it into each repo.
 
-It is pure reference content (Markdown) — there are **no runtime dependencies**, no scripts to run, and no Python or Node packages to install.
+It is pure reference content (Markdown) - there are **no runtime dependencies**, no scripts to run, and no Python or Node packages to install.
 
 ## Prerequisites
 
@@ -103,4 +103,4 @@ Remove-Item -Recurse -Force "$env:USERPROFILE\.claude\skills\apify-expert"
 The skill's auto-activation depends on the description in `SKILL.md`'s frontmatter. Triggers include questions about Apify Actors, runs, storage, proxy, the CLI/SDK, the REST API, Standby mode, Store mechanics, and "what's new on Apify". If your phrasing doesn't match, force activation: "Use the `apify-expert` skill to..."
 
 **A platform figure looks out of date.**
-Figures flagged *(verify)* in the reference files should be confirmed against <https://docs.apify.com> before being quoted as hard limits — they drift. If you find a stale number, edit the relevant `references/*` file directly.
+Figures flagged *(verify)* in the reference files should be confirmed against <https://docs.apify.com> before being quoted as hard limits - they drift. If you find a stale number, edit the relevant `references/*` file directly.
